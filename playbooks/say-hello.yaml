@@ -1,0 +1,13 @@
+---
+- name: Playbook pour exécuter un script shell
+  hosts: all
+  tasks:
+    - name: Copy shell script into the target machine
+      copy:
+        src: ../scripts/create_hello.sh
+        dest: /home/ansible/create_hello.sh
+        mode: '0755'  
+
+    - name: Execute shell script into destination machine
+      shell: /home/ansible/create_hello.sh
+

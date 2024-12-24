@@ -1,0 +1,29 @@
+name: Run Ansible Playbook on Controller
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  ansible-playbook:
+    test-matrix:
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      matrix:
+        os: [debian:12, almalinux:9]
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Set ssh-agent
+      uses: webfactory/ssh-agent@v0.9.0
+      with:
+        ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+
+    - name: Run Ansible Playbook on Controller
+      run: ansible-playbook -i inventory.yaml say-hello.yaml --check --diff -v
+      working-directory: ./
+
