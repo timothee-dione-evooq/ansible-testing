@@ -1,0 +1,24 @@
+---
+- name: Create a file in /tmp using the ansible user
+  hosts: myhosts
+  vars:
+    file_name: my_file_to_test.txt
+    file_content: "This is a file created by Ansible."
+
+  tasks:
+    - name: Ensure /home/ansible directory exists
+      file:
+        path: /home/ansible
+        state: directory
+        owner: ansible
+        group: ansible
+        mode: '0755'
+
+    - name: Create a file in /home/ansible
+      copy:
+        dest: "/home/ansible/{{ file_name }}"
+        content: "{{ file_content }}"
+        owner: ansible
+        group: ansible
+        mode: '0644'
+
