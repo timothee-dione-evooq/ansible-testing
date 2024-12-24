@@ -7,11 +7,7 @@ on:
 
 jobs:
   say-hello-playbook:
-    runs-on: ${{ matrix.os }}
-
-    strategy:
-      matrix:
-        os: [rhel9, debian12]
+    runs-on: ubuntu-latest
 
     steps:
     - name: Checkout repository
