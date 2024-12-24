@@ -6,9 +6,8 @@ on:
       - main
 
 jobs:
-  ansible-playbook:
-    test-matrix:
-      runs-on: ${{ matrix.os }}
+  say-hello-playbook:
+    runs-on: ${{ matrix.os }}
 
     strategy:
       matrix:
