@@ -1,0 +1,12 @@
+myhosts:
+  hosts:
+    REHL:
+      ansible_host: 127.0.0.1
+      ansible_port: 2222
+    Debian:
+      ansible_host: 127.0.0.1
+      ansible_port: 2223
+  vars:
+    ansible_user: ansible
+
+

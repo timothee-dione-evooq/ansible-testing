@@ -1,0 +1,7 @@
+- name: Create a user 'johnd' with a home directory
+  hosts: myhosts
+  tasks:
+   - name: create john doe
+     ansible.builtin.user:
+      name: johndoe
+      create_home: yes
