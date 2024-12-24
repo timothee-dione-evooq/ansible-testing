@@ -10,3 +10,5 @@ Then you need to add your controller public ssh key into the authorized ssh keys
 once done, you can run a playbook using this command:
 
 ansible-playbook playbooks/create_file.yaml -i inventory.yaml
+
+At every push, a workflow will be triggered to add a line into the file /home/ansible/hello.txt of the destination machines.
