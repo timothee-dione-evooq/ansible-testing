@@ -19,6 +19,6 @@ jobs:
         ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
 
     - name: Run Ansible Playbook on Controller
-      run: ansible-playbook -i inventory.yaml say-hello.yaml --check --diff -v
+      run: ansible-playbook -i inventory.yaml playbooks/say-hello.yaml --check --diff -v
       working-directory: ./
 
