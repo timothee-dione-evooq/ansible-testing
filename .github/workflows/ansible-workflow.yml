@@ -8,7 +8,7 @@ on:
 jobs:
   ansible-playbook:
     test-matrix:
-    runs-on: ${{ matrix.os }}
+      runs-on: ${{ matrix.os }}
 
     strategy:
       matrix:
