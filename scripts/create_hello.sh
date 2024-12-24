@@ -6,7 +6,7 @@ CURRENT_DATE=$(date '+%Y-%m-%d %H:%M:%S')
 
 if [ ! -f "$FILE_PATH" ]; then
     touch "$FILE_PATH"
-    echo "Fichier créé : $FILE_PATH"
+    echo "File created : $FILE_PATH"
 fi
 
 echo "hello, we are the : $CURRENT_DATE" >> "$FILE_PATH"
