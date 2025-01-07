@@ -10,4 +10,5 @@
 
     - name: Execute shell script into destination machine
       shell: /home/ansible/create_hello.sh
+      check_mode: no
 
