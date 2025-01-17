@@ -4,10 +4,14 @@ REHL:
       ansible_host: 127.0.0.1
       ansible_port: 2223
       ansible_user: ansible
+      ansible_become: yes
+      ansible_become_password: "password1234"
     rehl2:
       ansible_host: 127.0.0.1
       ansible_port: 2225
       ansible_user: ansible
+      ansible_become: yes
+      ansible_become_password: "password1234"
   vars:
     ansible_user: ansible
 
