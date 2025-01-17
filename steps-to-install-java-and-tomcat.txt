@@ -1,14 +1,18 @@
-doc location: https://docs.oracle.com/en/java/javase/23/install/installation-jdk-linux-platforms.html#GUID-737A84E4-2EFF-4D38-8E60-3E29D1B884B8
+doc location: 
+https://sorenpoulsen.com/install-tomcat-8-on-ubuntu
+https://sorenpoulsen.com/install-oracles-java-development-kit-on-ubuntu
+https://docs.oracle.com/en/java/javase/23/install/installation-jdk-linux-platforms.html#GUID-737A84E4-2EFF-4D38-8E60-3E29D1B884B8
 
 #Unpackage the java zip
-tar xvzf jdk-8u74-linux-x64.tar.gz
+tar xvzf jdk-23_linux-aarch64_bin.tar.gz
 
 #Move it to /sur/local
 sudo mv jdk-23.0.1 /usr/local
 sudo chown -R root:root /usr/local/jdk1.8.0_74/
 #Make the java install active
 sudo ln -s /usr/local/jdk1.8.0_74/ /usr/local/java
-sudo cat JAVA_HOME=/usr/local/java >> /etc/environment
+sudo echo JAVA_HOME=/usr/local/java >> /etc/environment
+source /etc/environment
 
 
 

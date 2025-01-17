@@ -1,0 +1,8 @@
+---
+- name: Ping REHL machines
+  hosts: REHL
+  gather_facts: no
+  tasks:
+    - name: Ping all REHL hosts
+      ansible.builtin.ping:
+
