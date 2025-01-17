@@ -8,8 +8,8 @@ REHL:
       ansible_host: 127.0.0.1
       ansible_port: 2225
       ansible_user: ansible
-    vars:
-      ansible_user: ansible
+  vars:
+    ansible_user: ansible
 
 Debian:
   hosts:
@@ -17,6 +17,6 @@ Debian:
       ansible_host: 127.0.0.1
       ansible_port: 2222
       ansible_user: ansible
-    vars:
-      ansible_user: ansible
+  vars:
+    ansible_user: ansible
 
