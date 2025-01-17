@@ -1,14 +1,14 @@
 ---
 - name: Install Java on target hosts
-  hosts: all
+  hosts: REHL
   become: yes
   tasks:
-    ---
-      - name: Copy java zip package into the server
-        copy:
-          src: ../packages/jdk-23_linux-x64_bin.deb
-          dest: /home/ansible/jdk-23_linux-x64_bin.deb
-          mode: '0755'
+
+    - name: Copy java zip package into the server
+      ansible.builtin.copy:
+        src: ../packages/jdk-23_linux-aarch64_bin.tar.gz
+        dest: /home/ansible/jdk-23_linux-aarch64_bin.tar.gz
+        mode: '0755'
 
     - name: Unpackage the Java tarball
       ansible.builtin.unarchive:

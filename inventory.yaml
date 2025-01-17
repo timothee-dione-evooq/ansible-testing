@@ -2,12 +2,12 @@ REHL:
   hosts:
     rehl1:
       ansible_host: 127.0.0.1
-       ansible_port: 2223
-       ansible_user: ansible
+      ansible_port: 2223
+      ansible_user: ansible
     rehl2:
-       ansible_host: 127.0.0.1
-       ansible_port: 2225
-       ansible_user: ansible
+      ansible_host: 127.0.0.1
+      ansible_port: 2225
+      ansible_user: ansible
     vars:
       ansible_user: ansible
 
@@ -15,8 +15,8 @@ Debian:
   hosts:
     debian1:
       ansible_host: 127.0.0.1
-       ansible_port: 2222
-       ansible_user: ansible
+      ansible_port: 2222
+      ansible_user: ansible
     vars:
       ansible_user: ansible
 
