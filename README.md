@@ -15,4 +15,5 @@ At every push, a workflow will be triggered to add a line into the file /home/an
 
 
 Next steps:
+Redownload the java package for it to be compatible with x86_64 architecture (REHL_9)
 ```ansible-playbook -i inventory.yaml playbooks/java-installation.yaml```
